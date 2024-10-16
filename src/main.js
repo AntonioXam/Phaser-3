@@ -1,5 +1,5 @@
 // IMPORTAR LA PRIMERA ESCENA
-import Firstscene from './scenes/Firstscene.js'
+import Firstscene from './scenes/Firstscene.js';
 
 const config = {
     // OPCIONALES
@@ -13,6 +13,13 @@ const config = {
     // OBLIGATORIO
     type: Phaser.AUTO, // WEBGL O CANVAS O AUTOMATICO
     backgroundColor: '#34495E', // FONDO DEL LIENZO
+    physics: {
+        default: 'arcade', //motor de fisicas
+        arcade: {
+            gravity: { y: 0 }, // GRAVEDAD
+            debug: true // activa o desactiva el modo debug (colisiones)
+        }
+    },
     scale: {
         width: 1136, // TAMAÑO DEL LIENZO
         height: 640,
